@@ -12,7 +12,6 @@ import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
-@Profile("dev")
 public class DataConfiguration {
 
     @Bean
@@ -21,7 +20,7 @@ public class DataConfiguration {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/eventoapp");
         dataSource.setUsername("root");
-        dataSource.setPassword("michelli14");
+        dataSource.setPassword("123");
         return dataSource;
     }
 
