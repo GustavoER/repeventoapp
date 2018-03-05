@@ -15,6 +15,10 @@ public class Evento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigo;
+    private String nome;
+    private String local;
+    private String data;
+    private String horario;
 
     public long getCodigo() {
         return codigo;
@@ -23,11 +27,6 @@ public class Evento implements Serializable {
     public void setCodigo(long codigo) {
         this.codigo = codigo;
     }
-
-    private String nome;
-    private String local;
-    private String data;
-    private String horario;
 
     public String getNome() {
         return nome;
