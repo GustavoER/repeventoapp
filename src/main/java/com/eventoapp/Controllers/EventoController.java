@@ -30,6 +30,5 @@ public class EventoController {
         Iterable<Evento> eventos = er.findAll();
         mv.addObject("eventos", eventos);
         return mv;
-
     }
 }
