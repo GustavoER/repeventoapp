@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
 public class EventoappApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(EventoappApplication.class, args);
     }
 }
