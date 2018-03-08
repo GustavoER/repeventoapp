@@ -14,11 +14,18 @@
 </head>
 <body>
 <h1>Cadastro de Evento</h1>
-<form method="post">
+<h3><a class="waves-effect waves-light btn" href="/eventos"><i class="material-icons left">add_circle_outline</i>Lista de Eventos</a></h3>
+<form class="container" method="post">
     Nome: <input type="text" value="" name="nome"/>
-    Local: <input type="text" value="" name="local"/>
-    Data: <input type="date" value="" name="data"/>
-    Horário: <input type="text" value="" name="horario"/>
+    <div class="input-field col s6">
+        Local: <input type="text" value="" name="local"/>
+    </div>
+    <div class="input-field col s3">
+        Data: <input type="date" value="" name="data"/>
+    </div>
+    <div class="input-field col s3">
+        Horário: <input type="text" value="" name="horario"/>
+    </div>
     <button type="submit">Salvar</button>
 </form>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
