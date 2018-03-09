@@ -1,12 +1,17 @@
 package com.eventoapp.Models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 
 @Entity
 public class Convidado {
     @Id
+    @NotEmpty
     private String rg;
+    @NotEmpty
     private String nomeconvidado;
+
     @ManyToOne
     @JoinColumn(name = "EVENTO")
 
