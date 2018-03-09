@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ConvidadoRepository extends JpaRepository<Convidado, String> {
     Iterable<Convidado> findByEvento(Evento evento);
+    Convidado findByrg(String rg);
 }

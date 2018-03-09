@@ -26,6 +26,7 @@ public class Evento implements Serializable {
     private String horario;
 
     @OneToMany
+    @JoinColumn(name = "EVENTO")
     private List<Convidado> convidados;
 
     public long getCodigo() {

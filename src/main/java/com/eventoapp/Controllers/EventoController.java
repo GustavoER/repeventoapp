@@ -65,4 +65,19 @@ public class EventoController {
         attributes.addFlashAttribute("Mensagem", "Convidado adicionado com sucesso");
         return "redirect:/{codigo}";
     }
+    @RequestMapping("/deletarEvento/{codigo}")
+    public String deletarEvento(@PathVariable("codigo") long codigo){
+        Evento evento = er.findByCodigo(codigo);
+        er.delete(evento);
+        return "redirect:/eventos";
+    }
+    @RequestMapping("/deletarConvidado{rg}")
+    public String deletarConvidado(@PathVariable("rg") String rg){
+        Convidado convidado = cr.findByrg(rg);
+        cr.delete(convidado);
+        Evento evento = convidado.getEvento();
+        long codigoEvento = evento.getCodigo();
+        String codigo = ""+ codigoEvento;
+        return "redirect:/"+codigo;
+    }
 }
